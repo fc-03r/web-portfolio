@@ -1,0 +1,109 @@
+/* 画面全体（PC用） */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* タイトル用 */
+#title {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    padding-bottom: 30px;  /* 下に余白を確保 */
+}
+
+#title-main {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 36px;
+    display: block;
+}
+
+#title-sub {
+    font-family: 'Sawarabi Mincho', serif;
+    font-size: 20px;
+    display: block;
+    margin-top: 4px;       /* 上のタイトルとの間隔 */
+}
+
+
+/* 中央のノベルゲーム画面 */
+#game-screen {
+    width: 1000px;
+    height: 600px;
+    background: url("yodaka.jpg") no-repeat;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    margin-top: 60px; /* タイトルの高さ + 余白分 */
+}
+
+/* テキストボックス */
+#textbox {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 28%;
+    background: rgba(0,0,0,0.55);
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    line-height: 1.6;
+    cursor: pointer; /* スマホでも押しやすく */
+}
+
+/* 点滅カーソル */
+#cursor {
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* フェードイン */
+#fade {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    animation: fadein 2s forwards;
+}
+
+@keyframes fadein {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* スマホ（縦長） */
+@media (max-width: 800px) {
+    body {
+        display: block;
+    }
+
+    #game-screen {
+        width: 100vw;
+        height: 100vh;
+        background: url("yodaka.jpg") center/cover no-repeat;
+        box-shadow: none;
+    }
+
+    #textbox {
+        font-size: 18px;
+    }
+}
