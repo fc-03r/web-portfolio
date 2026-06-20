@@ -1,0 +1,91 @@
+/* ==========================================
+   フッター全体
+========================================== */
+#footer {
+    background: #fff5fa; /* 柔らかいピンク */
+    padding: 60px 20px 30px;
+    color: #444;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ------------------------------------------
+   個別ボックス
+------------------------------------------ */
+.footer-box {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+/* ------------------------------------------
+   リンク
+------------------------------------------ */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+.footer-links a {
+    text-decoration: none;
+    color: #444;
+    transition: 0.3s;
+}
+.footer-links a:hover {
+    color: #ff77c4;
+}
+
+/* ------------------------------------------
+   SNS
+------------------------------------------ */
+.footer-sns {
+    text-align: center;
+    margin: 30px 0 10px;
+}
+.footer-sns a img {
+    width: 30px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+.footer-sns a img:hover {
+    transform: scale(1.2);
+}
+
+/* ------------------------------------------
+   コピーライト
+------------------------------------------ */
+.footer-copy {
+    text-align: center;
+    font-size: 0.9rem;
+    padding-top: 10px;
+    color: #666;
+}
+
+/* ==========================================
+   スマホ対応
+========================================== */
+@media (max-width: 700px) {
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-box {
+        margin-bottom: 20px;
+    }
+}

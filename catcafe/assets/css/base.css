@@ -1,0 +1,30 @@
+/* ------------------------------
+   基本リセット
+------------------------------ */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Zen Kurenaido', sans-serif; /* 共通フォント */
+    color: #333;
+    box-sizing: border-box;
+}
+
+.concept-title,
+.services-title,
+.faq-title,
+.news-title,
+.contact-title {
+    display: block;
+    text-align: center !important; /* 必要に応じて優先 */
+    margin: 60px auto 30px;
+    letter-spacing: 0.3em;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* ------------------------------
+   main-content は初期非表示
+------------------------------ */
+#main-content {
+    display: none;
+}

@@ -1,0 +1,93 @@
+/* NEWS セクション */
+#news {
+    background: #ffffff;
+    padding: 100px 20px;
+}
+
+
+/* タイムラインの線 */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #ffd0e8; /* 優しいピンクライン */
+    border-radius: 2px;
+}
+
+/* タイムラインの各項目 */
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    padding-left: 50px;
+    color: #4a4a4a;
+}
+
+/* ピンクの丸 */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: #ff8dd6;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+/* 日付 */
+.timeline-date {
+    font-size: 1.4rem;
+    color: #887a80;
+    margin-bottom: 5px;
+}
+
+/* 内容カード */
+.timeline-content {
+    background: #fff7fc; /* ほんのりピンク背景 */
+    border: 1px solid #f3d7e8;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.timeline-content h3 {
+    font-size: 1.7rem;
+    color: #5b4e53;
+    margin-bottom: 6px;
+}
+
+.timeline-content p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #5f5b5c;
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+    .timeline {
+        padding-left: 15px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item {
+        padding-left: 35px;
+    }
+
+    .timeline-item::before {
+        left: 2px;
+    }
+}

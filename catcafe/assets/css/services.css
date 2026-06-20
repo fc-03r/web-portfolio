@@ -1,0 +1,98 @@
+#services {
+    background-color: #fff5fa; /* 薄いピンク背景 */
+    padding: 60px 20px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    color: #333;
+}
+
+.services-box p {
+    font-size: 1.3rem; /* 調整値は好みで */
+}
+
+/* 行ごとにまとめる */
+.services-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.services-row.single .services-box {
+    flex: 1 1 100%; /* 1つの箱は幅いっぱい */
+    max-width: 900px;
+}
+
+.services-row.double .services-box {
+    flex: 1 1 400px; /* 2つの箱は均等に並ぶ */
+    max-width: 420px;
+}
+
+/* 白枠 */
+.services-box {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* 見出し */
+.services-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+    letter-spacing: 0.5em; /* 数値はお好みで調整 */
+}
+
+/* リスト */
+.services-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-box ul li {
+    font-size: 1.0rem;
+    line-height: 2;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* 注記 */
+.services-box .note {
+    font-size: 1.3rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* ドリンクメニューの2列 */
+.menu-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-column {
+    flex: 1;
+}
+
+.menu-column ul li {
+    margin-bottom: 5px;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .services-row.double .services-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .menu-columns {
+        flex-direction: column;
+    }
+
+    .menu-column {
+        flex: 1 1 100%;
+    }
+}

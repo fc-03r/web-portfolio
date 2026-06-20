@@ -1,0 +1,110 @@
+/* ================================
+   CONCEPT 全体（背景2枚）
+================================= */
+#concept {
+    position: relative;
+
+    /* 背景レイヤー */
+    background-color: #ffffff;
+    background-image:
+        url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff8dd6' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"),
+        url('../img/conseptbc.png');
+    background-repeat: repeat, no-repeat;
+    background-position: center, center;
+    background-size: auto, cover;
+
+    padding: 80px 20px;
+    color: #333;
+    overflow-x: hidden; /* 右側の白余白防止 */
+}
+
+/* ================================
+   横並び（PC）
+================================= */
+.concept-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.concept-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+/* 画像右 ＋ 文字左 */
+.concept-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ================================
+   画像（丸形）
+================================= */
+.concept-img img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* ================================
+   テキスト
+================================= */
+.concept-text p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+/* ================================
+   モバイル（縦並びに変更！）
+================================ */
+@media (max-width: 600px) {
+
+    .concept-item,
+    .concept-item.reverse {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* ★ 画像を中央に配置するラッパー */
+    .concept-img {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* ← 中央揃え */
+    }
+
+    /* 画像を縮小・正円維持 */
+    .concept-img img {
+        width: 80%;
+        max-width: 260px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .concept-text p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        padding: 0 10px;
+    }
+}
+
+
+/* ================================
+   フェードアップアニメーション
+================================= */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}

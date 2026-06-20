@@ -1,0 +1,150 @@
+/* FAQ セクション全体 */
+.faq-section {
+  padding: 100px 20px;
+  margin: 100px auto;
+  max-width: 1100px;
+  background: #ffffff;
+}
+
+.faq-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* FAQ 1項目（外枠） */
+.faq-item {
+  border: 2px solid #ffb6d9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item.open {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* 質問ボタン */
+.faq-question {
+  width: 100%;
+  background: #ffe6f1;
+  color: #444;
+  border: none;
+  text-align: left;
+  padding: 22px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0; /* 外枠に任せる */
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #ffd3e8;
+}
+
+/* 開いた時の区切り線（質問と回答の境界） */
+.faq-item.open .faq-question {
+  border-bottom: 2px dashed #ffb6d9;
+}
+
+/* 回答部分 */
+.faq-answer {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    height 0.35s ease,
+    opacity 0.25s ease;
+  }
+
+
+/* 開いた時だけ表示 */
+.faq-item.open .faq-answer {
+  max-height: 300px; /* FAQ1つ分で十分 */
+  opacity: 1;
+ padding: 20px 24px 38px; /* 下だけ少し多め */
+}
+
+.details-summary {
+  position: relative;
+  padding: 20px 20px 20px 60px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.details-summary .btn {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+}
+
+/* 共通 */
+.details-summary .btn::before,
+.details-summary .btn::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+/* 横線（－） */
+.details-summary .btn::after {
+  width: 18px;
+  height: 4px;
+  top: 7px;
+  left: 0;
+}
+
+/* 縦線（＋の縦棒） */
+.details-summary .btn::before {
+  width: 4px;
+  height: 18px;
+  top: 0;
+  left: 7px;
+}
+
+/* 開いているとき（－になる） */
+.details-summary.is-active .btn::before {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.faq-question {
+  position: relative;
+  padding-left: 56px; /* アイコン分の余白 */
+}
+
+.faq-question::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  width: 16px;
+  height: 3px;
+  background-color: #444;
+  transform: translateY(-50%);
+}
+
+.faq-question::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  width: 3px;
+  height: 16px;
+  background-color: #444;
+  transform: translateY(-50%);
+  transition: opacity 0.2s ease;
+}
+
+.faq-item.open .faq-question::after {
+  opacity: 0;
+}

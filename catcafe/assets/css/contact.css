@@ -1,0 +1,93 @@
+/* ==============================
+   お問い合わせセクション
+================================= */
+#contact {
+    position: relative;
+    background-color: #ffffff;
+    background-image:
+        url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff8dd6' fill-opacity='0.15' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"),
+        url('../img/conseptbc.png');
+    background-repeat: repeat, no-repeat;
+    background-position: center, center;
+    background-size: auto, cover;
+    padding: 100px 20px;
+    color: #444;
+}
+
+/* フォームコンテナ */
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9); /* 背景を少し浮かせる */
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ラベル */
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #5a5055;
+}
+
+/* プルダウン */
+.contact-form select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* テキスト入力・テキストエリア */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: #ff8dd6;
+    box-shadow: 0 0 8px rgba(255, 141, 214, 0.3);
+    outline: none;
+}
+
+/* ボタン */
+.contact-form button {
+    display: block;
+    width: 100%;
+    background: #ff8dd6;
+    color: #fff;
+    padding: 15px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background: #ff5ab8;
+    transform: translateY(-2px);
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 20px;
+        border-radius: 12px;
+    }
+}
