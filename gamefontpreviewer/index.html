@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>フォントプレビュー（ゲーム風）</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 🎮 Google Fonts 読み込み -->
+  <!-- ↓ここでフォントファイルを読み込む。ゲームっぽい個性的なものを選択 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&family=Bungee+Spice&family=DotGothic16&family=Rampart+One&family=WDXL+Lubrifont+JP+N&family=New+Tegomin&family=Rock+3D&family=Shizuru&family=Chokokutai&family=Darumadrop+One&family=Monomaniac+One
+&display=swap"
+    rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>🎮 Game Font Previewer</h1>
+    <p>＼ゲーム制作に使用したい！変わり種フォントコレクション／</p>
+
+    <!-- ✍ 入力欄：リアルタイムで反映される -->
+    <label for="textInput">テキストを入力：</label>
+    <textarea id="textInput" rows="4">名無しさん、こんにちは。GAME START!!</textarea>
+
+    <!-- 🎚 フォント選択：Google Fontsで読み込んだものだけ表示 -->
+    <label for="fontSelect">フォントを選択：</label>
+    <select id="fontSelect">
+      <!-- value属性には CSSのfont-family名をそのまま記述 -->
+      <option value="New Tegomin">New Tegomin</option>
+      <option value="'Press Start 2P', sans-serif">Press Start 2P</option>
+      <option value="Orbitron">Orbitron</option>
+      <option value="Bungee Spice">Bungee Spice</option>
+      <option value="DotGothic16">DotGothic16</option>
+      <option value="Rampart One">Rampart One</option>
+      <option value="WDXL Lubrifont JP N">WDXL Lubrifont JP N</option>
+      <option value="'Rock 3D', sans-serif">Rock 3D</option>
+      <option value="'Shizuru', sans-serif">Shizuru</option>
+      <option value="Chokokutai">Chokokutai</option>
+      <option value="Darumadrop One">Darumadrop One</option>
+      <option value="Monomaniac One">Monomaniac One</option>
+
+    </select>
+
+    <!-- 🔠 サイズ調整 -->
+    <label for="fontSize">サイズ：</label>
+    <input type="range" id="fontSize" min="12" max="72" value="32">
+
+    <!-- 💪 太さ調整 -->
+    <label for="fontWeight">太さ：</label>
+    <input type="range" id="fontWeight" min="100" max="900" step="100" value="400">
+
+    <!-- 👁 プレビュー領域 -->
+    <div id="previewArea" class="preview"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
