@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette Maker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Color Palette Maker</h1>
+  <p class="subtitle">＼　Color Play Tool for Artists！！　／</p>
+
+  <!-- カラー生成ボタン -->
+  <div class="buttons">
+    <button data-type="random">Get Random Color!<br>【ランダムカラー】</button>
+  <button data-type="muted">Get Muted Tones!<br>【くすみカラー】</button>
+  <button data-type="pop">Create Pop Colors!<br>【ポップカラー】</button>
+  </div>
+  <br>
+  <div class="buttons">
+    <button data-type="complementary">Make Complementary Palette!<br>【ランダム補色パレット】</button>
+  <br>
+  <button data-type="character">Generate 4-Color Palette!<br>【４色パレット】</button></div>
+  <br>
+  <div class="buttons">
+  <button data-type="grayscale">Get Monochrome Shades!<br>【モノクロ】</button>
+</div>
+
+
+  <!-- ✅ カラーパレットを生成する場所 -->
+  <div id="palette" class="palette"></div>
+
+  <!-- ✅ script.js は必ず body の一番下に -->
+  <script src="script.js"></script>
+</body>
+
+</html>
